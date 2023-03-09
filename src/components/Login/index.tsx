@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <LoginBox>
       <Header>
-        <h1>로그인 </h1>
+        <H1>로그인 </H1>
       </Header>
       <LoginInput />
     </LoginBox>
@@ -37,4 +37,10 @@ const Header = styled.div`
     font-size: 40px;
     font-weight: 600;
   }
+`;
+
+const H1 = styled.h1`
+  color: rgba(28, 40, 148);
+  font-size: 40px;
+  font-weight: 600;
 `;
