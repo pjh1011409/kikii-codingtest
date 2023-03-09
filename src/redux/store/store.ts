@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
+import dispatchDataSlice from '../reducer/dispatchSlice';
 
 const rootReducer = combineReducers({
-  //reducer
+  dispatchData: dispatchDataSlice,
 });
 
 const store = configureStore({
