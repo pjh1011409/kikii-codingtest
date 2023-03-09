@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { MessageType, useToast } from '../../hooks/useToast';
+import { MessageType, useToast } from '../../hooks/useCustomToast';
 
 interface SelectDateBarProps {
   currentDate: Date;

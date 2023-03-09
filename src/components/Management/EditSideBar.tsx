@@ -4,7 +4,7 @@ import { BusData } from '../Management/index';
 import { useDispatch } from 'react-redux';
 import { setHour, setMinute } from '../../redux/reducer/dispatchSlice';
 import useCustomSelector from '../../hooks/useCustomSelector';
-import { MessageType, useToast } from '../../hooks/useToast';
+import { MessageType, useToast } from '../../hooks/useCustomToast';
 import api from '../../api/api';
 
 interface EditSideBarProps {
@@ -55,6 +55,7 @@ const EditSideBar = ({ selectStartTime, setSelectStartTime }: EditSideBarProps) 
       const response = await api.patch(`/dispatch/update/${id}/${time}`);
       showToast(MessageType.Success, response.data.message);
       setSelectStartTime(null);
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
-import useInput from '../../../hooks/useInput';
+import useInput from '../../../hooks/useCustomInput';
 import { useNavigate } from 'react-router-dom';
 import api from '../../../api/api';
-import { MessageType, useToast } from '../../../hooks/useToast';
+import { MessageType, useToast } from '../../../hooks/useCustomToast';
 import UserNumber from './UserNumber';
 import UserPassword from './UserPassword';
 
