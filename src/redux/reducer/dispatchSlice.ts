@@ -5,12 +5,14 @@ export interface DispatchDataState {
   data: BusData[];
   hour: string;
   minute: string;
+  companyName: string;
 }
 
 const initialState: DispatchDataState = {
   data: [],
   hour: '',
   minute: '',
+  companyName: '',
 };
 
 const dispatchDataSlice = createSlice({
@@ -26,9 +28,12 @@ const dispatchDataSlice = createSlice({
     setMinute: (state, action: PayloadAction<string>) => {
       state.minute = action.payload;
     },
+    setComanyName: (state, action: PayloadAction<string>) => {
+      state.companyName = action.payload;
+    },
   },
 });
 
-export const { setData, setHour, setMinute } = dispatchDataSlice.actions;
+export const { setData, setHour, setMinute, setComanyName } = dispatchDataSlice.actions;
 
 export default dispatchDataSlice.reducer;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { FaUserCircle, FaBars } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import useCustomSelector from '../../hooks/useCustomSelector';
 
 interface NormalNavBarProps {
   isOpened: boolean;
@@ -10,6 +11,7 @@ interface NormalNavBarProps {
 
 const NormalNavBar = ({ isOpened, setIsOpened }: NormalNavBarProps) => {
   const navigate = useNavigate();
+  const { companyName } = useCustomSelector().dispatchState;
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/loginPage');
@@ -31,7 +33,7 @@ const NormalNavBar = ({ isOpened, setIsOpened }: NormalNavBarProps) => {
       </Hamburger>
       <UserContainer>
         <FaUserCircle size="25px" />
-        <span>Username</span>
+        <span>{companyName}</span>
         <LogoutButton onClick={handleLogout}>로그아웃</LogoutButton>
       </UserContainer>
     </>

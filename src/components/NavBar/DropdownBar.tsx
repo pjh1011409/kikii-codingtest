@@ -3,6 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { FaUserCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import useCustomSelector from '../../hooks/useCustomSelector';
 
 interface DropdownBarProps {
   isOpened: boolean;
@@ -10,6 +11,7 @@ interface DropdownBarProps {
 
 const DropdownBar = ({ isOpened }: DropdownBarProps) => {
   const navigate = useNavigate();
+  const { companyName } = useCustomSelector().dispatchState;
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/loginPage');
@@ -19,7 +21,7 @@ const DropdownBar = ({ isOpened }: DropdownBarProps) => {
     <Dropdown isOpened={isOpened}>
       <UserContainer>
         <FaUserCircle size="25px" />
-        <span>Username</span>
+        <span>{companyName}</span>
         <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
       </UserContainer>
       <MenuItem>홈</MenuItem>

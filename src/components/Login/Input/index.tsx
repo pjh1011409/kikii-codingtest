@@ -6,6 +6,8 @@ import api from '../../../api/api';
 import { MessageType, useToast } from '../../../hooks/useCustomToast';
 import UserNumber from './UserNumber';
 import UserPassword from './UserPassword';
+import { useDispatch } from 'react-redux';
+import { setComanyName } from '../../../redux/reducer/\bdispatchSlice';
 
 const LoginInput = () => {
   const isAuthenticated = localStorage.getItem('token') !== null;
@@ -13,6 +15,7 @@ const LoginInput = () => {
   const [userPassword, onChangeUserPassword] = useInput<string>('');
   const showToast = useToast();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,6 +28,7 @@ const LoginInput = () => {
           password: userPassword.trim(),
         });
         const token = response.data.object.token;
+        dispatch(setComanyName(response.data.object.companyName));
         localStorage.setItem('token', token);
         navigate('/managementPage');
       } catch (err) {
