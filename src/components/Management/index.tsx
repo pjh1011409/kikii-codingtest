@@ -6,7 +6,7 @@ import SelectDateBar from './SelectDateBar';
 import EditSideBar from './EditSideBar';
 import { setData } from '../../redux/reducer/dispatchSlice';
 import { useDispatch } from 'react-redux';
-import DispatchTable from './Table';
+import DispatchTable from './table';
 import useCustomSelector from '../../hooks/useCustomSelector';
 import api from '../../api/api';
 
