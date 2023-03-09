@@ -8,6 +8,7 @@ import { setData } from '../../redux/reducer/dispatchSlice';
 import { useDispatch } from 'react-redux';
 import DispatchTable from './Table';
 import useCustomSelector from '../../hooks/useCustomSelector';
+import api from '../../api/api';
 
 export interface BusData {
   id: number;
@@ -44,7 +45,7 @@ const Management = () => {
 
   const getDispatchData = async (date: string) => {
     try {
-      const response = await axios.get(`http://kikibus.iptime.org:18080/dispatch/70/${date}`);
+      const response = await api.get(`/dispatch/70/${date}`);
       dispatch(setData(response.data.object));
     } catch (error) {
       console.error(error);
