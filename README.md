@@ -222,7 +222,9 @@ navigate('/managementPage');
 |<img width="400" alt="스크린샷 2023-03-09 오후 7 33 40" src="https://user-images.githubusercontent.com/81337674/223998415-f230776e-19c5-410b-82d0-e9afe205609c.png">|<img width="400" alt="로그인,로그아웃" src="https://user-images.githubusercontent.com/81337674/223996242-cb4a4a76-e830-4eec-9869-09b75b380924.gif">|
 | **영상 2** | **영상 3**|
 |<img width="400" alt="배차 정보 조회" src="https://user-images.githubusercontent.com/81337674/223996419-d4ffe88d-da72-4499-9016-de94cfc1d086.gif">|<img width="400" alt="배차 정보 수정" src="https://user-images.githubusercontent.com/81337674/223996477-55fa1734-5b4f-4313-ae9a-7dbef472a93a.gif">|
-
+| **반응형 NavBar** | |
+|<img width="400" alt="스크린샷 2023-03-09 오후 7 39 42" src="https://user-images.githubusercontent.com/81337674/223999738-f87ce7ed-2d6a-43df-8ed2-65f06f724b5c.png">
+|
 <br>
 
 ##  Project Architecture
